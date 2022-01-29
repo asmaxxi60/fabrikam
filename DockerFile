@@ -1,0 +1,7 @@
+FROM node:7 
+WORKDIR /fabrikam
+COPY pakage.json/fabrikam
+RUN npm install
+COPY ./fabrikam
+CMD node server.js
+EXPOSE 5000
